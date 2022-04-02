@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bonus VIP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<style>
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: center;
+  padding:20px;
+}
+
+img {
+	display: none;
+    height: auto !important;
+}
+
+.flex-column a img {display:inline;}
+  
+@media screen and (min-width: 800px) {
+  .flex-column {
+    flex: 1
+  }
+  img {
+    height: 200px !important;
+  }
+}
+</style>
+<style>
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  font-family: sans-serif;
+  perspective: 800px;
+}
+.container input {
+  display: none;
+}
+.container label {
+  display: block;
+  position: absolute;
+}
+.container label .top {
+  width: 200px;
+  margin: 0 auto;
+  height: 220px;
+  transition: 1s all;
+}
+.container label .top .pin {
+  background-color: peachpuff;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.3);
+}
+.container label .top .pin .rope {
+  width: 5px;
+  height: 200px;
+  z-index: -1;
+  background-color: gray;
+  top: 50%;
+  position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: 1s all;
+}
+.container label .top .pin .rope.left {
+  left: -21.4px;
+  transform: rotate(22deg);
+  border-left: 1px solid lightgray;
+  border-right: 1px solid gray;
+}
+.container label .top .pin .rope.right {
+  right: -21.4px;
+  transform: rotate(-22deg);
+  border-right: 1px solid lightgray;
+  border-left: 1px solid gray;
+}
+.container label .bottom {
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  box-shadow: 1px 1px 5px black;
+  transition: 1s all;
+}
+.container label .bottom .side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #fff;
+}
+.container label .bottom .side.front {
+  background-color: #54ad54;
+}
+.container label .bottom .side.back {
+  background-color: #ef4a4a;
+  transform: rotateY(180deg);
+}
+.container input:checked ~ label .top {
+  height: 210px;
+}
+.container input:checked ~ label .top .pin .rope.left {
+  left: 71.9px;
+  transform: rotate(-34deg);
+}
+.container input:checked ~ label .top .pin .rope.right {
+  right: 71.9px;
+  transform: rotate(34deg);
+}
+.container input:checked ~ label .bottom {
+  transform: translateX(-50%) rotateY(180deg);
+}
+
+</style>
+</head>
+<body style="font-family: Verdana,Geneva,sans-serif;">
+<div class="flex-row">
+
+<div class="flex-column">
+<a href="https://cinebel.dhnet.be/fr/film/1022340/La%20Derni%C3%A8re%20Tentation%20des%20Belges#schedules" target="_blank"><img alt="" src="https://static.cinebel.be/img/movie/poster/big/1022340_fr_la_derniere_tentation_des_belges_1642767204206.jpg" border="0" height="200" style="max-width:100%;"></a><br>
+<br>
+<font style="font-size: 11pt;" size="2"><b>LA DERNIERE TENTATION DES BELGES</b></font><br>
+<br>
+<font style="font-size: 9pt;" size="1">Flagey</font><br /><br />
+<font style="font-size: 9pt;" size="1">Tant qu'il est à l'affiche</font>
+</div>
+
+<div class="flex-column">
+<a href="http://www.toone.be/programme/article/cyrano-de-bergerac" target="_blank"><img alt="" src="https://www.french-connect.com/images/business_events/phpD9mv5p.jpg" border="0" height="200" style="max-width:100%;"></a><br>
+<br>
+<font style="font-size: 11pt;" size="2"><b>CYRANO DE BERGERAC</b></font><br>
+<br>
+<font style="font-size: 9pt;" size="1">Théâtre de Toone</font><br /><br />
+<font style="font-size: 9pt;" size="1">Jusqu'au 02/04</font>
+</div>
+
+</div>
+
+</body>
+</html>
